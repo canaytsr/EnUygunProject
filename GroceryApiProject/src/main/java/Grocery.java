@@ -8,4 +8,3 @@ public class Grocery {
     double price;
     int stock;
 }
-
