@@ -11,6 +11,7 @@
     <modules>
         <module>AndroidProject</module>
         <module>GroceryApiProject</module>
+        <module>WebAutomationProject</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
