@@ -17,4 +17,4 @@
 ![img_1.png](img_1.png)
 
 * Requests were made to the created services as determined and the returned response was checked.
-* Rest assured for response manipulations.
+* Restassured was used for manipulations of responses.
