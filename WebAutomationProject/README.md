@@ -12,7 +12,6 @@
 
 ![img.png](img.png)
 ![img_1.png](img_1.png)
-
 #### Allure was used for reporting in the project.
 
 ![img_2.png](img_2.png)
