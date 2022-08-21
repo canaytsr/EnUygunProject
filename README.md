@@ -12,9 +12,9 @@ There are 4 projects in this repo.
 In this project, the available, sending and sold parameters were sent to the petStore service and the tests were carried out.
 Unirest and httpResponse were used for this.
 
-When find status is called, the get method is called by taking the third pet id through the returned pets.
+When findStatus is called, the petid of the third one is retrieved from the returned pets and the get method is called with this petid.
 
-Finally, post and delete tests were written for pet id.
+Finally, post and delete tests were written for petid.
 
 While writing test methods in the project, Unirest, httpResponse and Rest assured were used.
 
