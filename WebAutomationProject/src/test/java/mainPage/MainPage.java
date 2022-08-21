@@ -93,17 +93,11 @@ public class MainPage {
             }
         }
     }
-    public void selectReturnFlight(int limit) throws IndexOutOfBoundsException{
+    public void selectReturnFlight() throws IndexOutOfBoundsException{
         //assign the found elements to the list
         List<WebElement> return_flight = utils.findElements(elements.getRadioButtonReturn());
-        //finding and selecting which return flight in the same packet to select
-        if(limit-1<=return_flight.size())
-        {
-            return_flight.get(limit-1).click();
-        }
-        else{
-            System.out.println("Check limit value");
-        }
+        //clicking the same area flight
+        return_flight.get(0).click();
 
     }
     public void clickSelectButton() {

@@ -1,0 +1,7 @@
+{
+  "appium:deviceName": "oreo",
+  "platformName": "ANDROID",
+  "appium:automationName": "UIAutomator2",
+  "appium:udid": "emulator-5554",
+  "appium:avd": "oreo"
+}
