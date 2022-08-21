@@ -3,7 +3,7 @@ package testMethods;
 import drivers.DriverType;
 import drivers.Drivers;
 import io.qameta.allure.Description;
-//import io.qameta.allure.Story;
+import io.qameta.allure.Story;
 import listeners.TestListener;
 import mainPage.MainPage;
 import org.testng.annotations.BeforeClass;
@@ -17,16 +17,16 @@ public class GetTicketTest {
     MainPage mainPage;
     Drivers driver;
     private final String origin = "İstan";
-    private final String destination ="amster";
+    private final String destination = "amster";
     private final int departureDay = 10;
     private final int returnDay = 5;
     private final boolean returnIsClick = true;
-    private final String provider ="Türk Hava Yolları";
-    private final String provider2 ="Pegasus";
+    private final String provider = "Türk Hava Yolları";
+    private final String provider2 = "Pegasus";
     String url = "https://www.enuygun.com/ucak-bileti/";
 
     @BeforeClass
-    public void setup(){//making assignment
+    public void setup() {//making assignment
         Path resourceDirectory = Paths.get("src", "test", "resources");
         String absolutePath = resourceDirectory.toFile().getAbsolutePath();
         driver = new Drivers();//create new driver
@@ -36,8 +36,8 @@ public class GetTicketTest {
         mainPage = new MainPage(driver.returnPage());
     }
 
-    @Test(priority = 1,description = "select keyword value in the origin list")
-   // @Story("send true keyword")
+    @Test(priority = 1, description = "select keyword value in the origin list")
+    @Story("send true keyword")
     @Description("click origin search area and send key value")
     public void searchKeywordForOrigin() {
         //sending origin key value
@@ -45,56 +45,73 @@ public class GetTicketTest {
 
     }
 
-    @Test(priority = 2,description = "select keyword value in the destination list")
-  //  @Story("send true keyword")
-  //  @Description("click destination search area and send key value")
-    public void searchKeywordForDestination()  {
+    @Test(priority = 2, description = "select keyword value in the destination list")
+    @Story("send true keyword")
+    @Description("click destination search area and send key value")
+    public void searchKeywordForDestination() {
         //sending destination key value
         mainPage.getListForDestinationSearch(destination);
 
     }
-    @Test(priority = 3,description ="select date for using departure day value")
-   // @Story("select date for departure day")
-   // @Description("click calendar area for departure day and select true value")
+
+    @Test(priority = 3, description = "select date for using departure day value")
+    @Story("select date for departure day")
+    @Description("click calendar area for departure day and select true value")
     public void selectDatesForOrigin() {
         //selecting departure day
         mainPage.getDatesForOrigin(departureDay);
 
     }
-    @Test(priority = 4,description = "select date for using return day value")
-   // @Story("select date for return day")
-    //@Description("click calendar area for return day and select true value")
-    public void selectDateForDestination()  {
+
+    @Test(priority = 4, description = "select date for using return day value")
+    @Story("select date for return day")
+    @Description("click calendar area for return day and select true value")
+    public void selectDateForDestination() {
         //selecting return day
         mainPage.getDateForDestination(returnDay);
 
     }
-    @Test(priority = 5)
-    public void clickDirect()  {
+
+    @Test(priority = 5,description = "select direk flight")
+    @Story("selecting direct flight button")
+    @Description("click direct button")
+    public void clickDirect() {
         //controlling check box
         mainPage.clickCheckBox(returnIsClick);
 
     }
-    @Test(priority = 6)
-    public void clickBuyTicket()  {
+
+    @Test(priority = 6,description = "select buy ticket button")
+    @Story("buy ticket button selected ")
+    @Description("click buy ticket button")
+    public void clickBuyTicket() {
         //clicking buy ticket button
         mainPage.clickButton();
 
     }
-    @Test(priority = 7)
-    public void selectFlight()  {
+
+    @Test(priority = 7, description = "click the select button")
+    @Story("selecting flight button")
+    @Description("clicked flight button")
+    public void selectFlight() {
         //selecting flight by using provider value
         mainPage.selectFlightWithProvider(provider);
 
     }
-    @Test(priority = 8)
-    public void selectReturnFlight()  {
+
+    @Test(priority = 8,description = "return flight selected")
+    @Story("selected return flight")
+    @Description("clicked return button")
+    public void selectReturnFlight() {
         //select return flight list element
         mainPage.selectReturnFlight();
 
     }
-    @Test(priority = 9)
-    public void clickSelectButton()  {
+
+    @Test(priority = 9,description = "click select button")
+    @Story("selecting select button")
+    @Description("clicked select button")
+    public void clickSelectButton() {
         //clicking select button
         mainPage.clickSelectButton();
 

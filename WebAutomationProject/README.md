@@ -9,3 +9,12 @@
 * ##### The flight of the airline company, which is dynamically taken from the page, is selected.
 * ##### The flight in the same package as the selected airline is selected.
 * ##### Finally, the automation process is completed by purchasing a ticket.
+
+![img.png](img.png)
+![img_1.png](img_1.png)
+
+#### Allure was used for reporting in the project.
+
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
+![img_4.png](img_4.png)
